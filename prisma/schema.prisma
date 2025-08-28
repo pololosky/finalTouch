@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+
+// les models
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  isSubscribed  Boolean  @default(false) // Par défaut, l'utilisateur n'est pas abonné
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  template Template?   // Relation avec les articles de blog
+}
+
+model Template{
+  id        Int      @id @default(autoincrement())
+  Lastname        String @default("Name")
+  firstName       String @default("firstName")
+  jobTitle        String @default("YourJob")
+  Departement     String @default("Your departement")
+  company         String @default("Your company")
+  Officephone     String @default("office tel")
+  MobilPhone      String @default("mobile tel")
+  website         String @default("webSite")
+  email           String @default("your email")
+  Adresse         String @default("")
+  Instagram       String @default("")
+  facebook        String @default("")
+  twitter        String @default("")
+  LinkedIn        String @default("")
+  WhatsApp        String @default("")
+  PersonnalImage  String @default("")
+  LogoImage       String @default("")
+  HandWrittingImage String @default("")
+
+  // Clé étrangère pour la relation un-à-un avec User
+  userId Int @unique
+  user   User @relation(fields: [userId], references: [id])
+}
