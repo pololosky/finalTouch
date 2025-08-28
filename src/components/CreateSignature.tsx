@@ -1,5 +1,5 @@
 "use client";
-import React, { act, Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ImputCase from "./ImputCase";
 import {
   Eye,
@@ -543,7 +543,7 @@ const CreateSignature = () => {
                   id="signature-preview"
                 >
                   <selectTemplate.Component post={templateData} />
-                </div> 
+                </div>
               </div>
               <div className="grid grid-cols-3 gap-2">
                 <button

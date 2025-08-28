@@ -1,8 +1,6 @@
 import { TemplateProps } from "@/types/TemplatesProps";
-import { CircleFadingPlus, Facebook, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
 
 //
 type AllTemplatesProps = {

@@ -21,9 +21,17 @@ const eslintConfig = [
   },
   {
     rules: {
-      "react/no-unescaped-entities": "off", // Désactive la règle
       "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-this-alias": "off",
+      "@typescript-eslint/no-require-imports": "off",
+      "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "{}": false, // Désactive la vérification pour le type {}
+        },
+      },
+    ],
+    "@typescript-eslint/no-unnecessary-type-constraint": "off"
     },
   },
 ];

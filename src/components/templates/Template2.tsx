@@ -1,6 +1,5 @@
 import { TemplateProps } from "@/types/TemplatesProps";
 import React from "react";
-import Image from "next/image";
 import {
   CircleFadingPlus,
   Facebook,

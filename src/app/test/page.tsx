@@ -1,6 +1,4 @@
 "use client";
-import Template1 from "@/components/templates/Template1";
-import Template2 from "@/components/templates/Template2";
 import Template3 from "@/components/templates/Template3";
 import Wrapper from "@/components/Wrapper";
 import { TemplateProps } from "@/types/TemplatesProps";
