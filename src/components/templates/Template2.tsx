@@ -19,7 +19,7 @@ type AllTemplatesProps = {
 
 const Template2: React.FC<AllTemplatesProps> = ({ post }) => {
   return (
-    <div className="flex gap-10 py-8 px-5 w-full">
+    <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col gap-10 py-8 px-5 w-full">
       <div
         className={`${post.LogoImage === "" ? "hidden" : "flex"} pt-2 h-full`}
       >
@@ -31,25 +31,25 @@ const Template2: React.FC<AllTemplatesProps> = ({ post }) => {
           className="rounded-xl"
         />
       </div>
-      <div className="flex flex-col w-2/3 gap-3">
+      <div className="flex flex-col xl:w-2/3 lg:w-2/3 md:w-2/3 w-full gap-3">
         {/* textes */}
         <div>
-          <h1 className="flex gap-2 xl:text-4xl lg:text-4xl md:text-2xl text-2xl text-gray-600 font-bold">
+          <h1 className="flex gap-2 xl:text-4xl lg:text-4xl md:text-2xl text-xl text-gray-600 font-bold">
             {" "}
             {post.firstName} {post.Lastname}{" "}
           </h1>
-          <div>
-            <p className="flex gap-2 justify-start text-xl text-right text-green-700">
+          <div className="">
+            <p className="flex gap-2 justify-start xl:text-xl lg:text-xl md:text-lg text-sm text-right text-green-700">
               {post.jobTitle} {post.company ? `at ${post.company}` : ""}
             </p>
-            <p className="flex gap-2 justify-start text-xl text-right text-green-700">
+            <p className="flex gap-2 justify-start xl:text-xl lg:text-xl md:text-lg text-sm text-right text-green-700">
               {post.Departement ? `Departement of ${post.Departement}` : ""}
             </p>
           </div>
         </div>
         <hr className="text-gray-500" />
         {/* les infos */}
-        <div className="grid grid-cols-2 gap-x-15 gap-y-3">
+        <div className="grid grid-cols-1 gap-x-15 gap-y-3">
           <div className={`flex`}>
             <div
               className={`${

@@ -9,7 +9,7 @@ type AllTemplatesProps = {
 
 const Template3: React.FC<AllTemplatesProps> = ({ post }) => {
   return (
-    <div className="flex justify-between items-center px-10 py-5 w-full">
+    <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col xl:justify-between lg:justify-between md:justify-between justify-center gap-7 items-center px-10 py-5 w-full">
       <div className="flex flex-col h-full gap-5 ">
         {/* les infos */}
         <div>
@@ -109,7 +109,7 @@ const Template3: React.FC<AllTemplatesProps> = ({ post }) => {
       </div>
       {/* adresse */}
       <div className="">
-        <div className={`${post.Adresse ? "flex flex-col" : "hidden"}`}>
+        <div className={`${post.Adresse ? "flex xl:flex-col lg:flex-col md:flex-col flex-row" : "hidden"}`}>
           <p className="text-sm">Address : </p>
           <p className="text-sm">{post.Adresse}</p>
         </div>

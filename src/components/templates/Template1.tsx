@@ -17,7 +17,7 @@ type AllTemplatesProps = {
 const Template1: React.FC<AllTemplatesProps> = ({ post }) => {
   return (
     <div className="flex justify-center w-full py-8 px-5">
-      <div className="flex w-full py-3 justify-center gap-10 px-1">
+      <div className="flex xl:flex-row lg:flex-row md:flex-row flex-col w-full py-3 justify-center gap-10 px-1">
         {/* gauche */}
         <div className="flex gap-3">
           <div
